@@ -1,5 +1,6 @@
 package com.hello.world.demo;
 
+import com.hello.world.demo.constant.DemoProperties;
 import com.hello.world.demo.entity.Product;
 import com.hello.world.demo.mapper.User;
 import com.hello.world.demo.mapper.UserMapper;
@@ -11,7 +12,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -26,6 +26,9 @@ public class DemoApplicationTests {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private DemoProperties demoProperties;
 
     @Test
 	public void contextLoads() {
@@ -80,4 +83,16 @@ public class DemoApplicationTests {
         User u = userMapper.findByUserName("AAA");
         Assert.assertEquals(20, u.getAge().intValue());
     }
+
+    @Test
+    public void testProperties(){
+        String name = demoProperties.getName();
+        String title = demoProperties.getTest();
+        String url = demoProperties.getUrl();
+        Assert.assertEquals(url,"jdbc:mysql://118.25.0.88:3306/test");
+        Assert.assertEquals(name,"jing.ji");
+
+        Assert.assertEquals(title,"111");
+    }
+
 }
