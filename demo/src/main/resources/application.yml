@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://118.25.0.88:3306/test
-    username: zsy_mysql
-    password: ZSY123abc$%^
+    url:
+    username:
+    password: 
   jpa:
     hibernate:
       naming:
