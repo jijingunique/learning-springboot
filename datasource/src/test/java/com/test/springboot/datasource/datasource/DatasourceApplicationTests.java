@@ -1,4 +1,4 @@
-package com.test.springboot_datasource.datasource;
+package com.test.springboot.datasource.datasource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

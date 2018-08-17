@@ -1,6 +1,6 @@
-package com.test.springboot_datasource.dao.mapper;
+package com.test.springboot.datasource.dao.mapper;
 
-import com.test.springboot_datasource.dao.domain.UserLongin;
+import com.test.springboot.datasource.dao.domain.UserLogin;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
@@ -15,13 +15,13 @@ import java.util.List;
 public interface DataSourceMapper {
     @ResultMap(value = "BaseResultMap")
     @Select("SELECT * FROM user_login WHERE  id = #{id}")
-    List<UserLongin> selectById(Long id);
+    List<UserLogin> selectById(Long id);
 
     @ResultMap(value = "BaseResultMap")
     @Select("SELECT * FROM user_login")
-    List<UserLongin> selectAllDs1();
+    List<UserLogin> selectAllDs1();
 
     @ResultMap(value = "BaseResultMap")
     @Select("SELECT * FROM user_login")
-    List<UserLongin> selectAllDs2();
+    List<UserLogin> selectAllDs2();
 }

@@ -1,10 +1,10 @@
-package com.test.springboot_datasource.dao.domain;
+package com.test.springboot.datasource.dao.domain;
 
 /**
  * @Author jing.ji
  * @Date 2018-08-13
  */
-public class UserLongin {
+public class UserLogin {
     private Long id;
 
     private String userName;
@@ -37,7 +37,7 @@ public class UserLongin {
 
     @Override
     public String toString() {
-        return "UserLongin{" +
+        return "UserLogin{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +

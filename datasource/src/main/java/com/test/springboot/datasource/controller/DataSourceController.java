@@ -1,7 +1,7 @@
-package com.test.springboot_datasource.controller;
+package com.test.springboot.datasource.controller;
 
-import com.test.springboot_datasource.dao.domain.UserLongin;
-import com.test.springboot_datasource.service.DataSourceService;
+import com.test.springboot.datasource.dao.domain.UserLogin;
+import com.test.springboot.datasource.service.DataSourceService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,24 +23,24 @@ public class DataSourceController {
     private DataSourceService dataSourceService;
 
     @GetMapping("/default/{id}")
-    public List<UserLongin> useDefaultDataSource(@PathVariable("id") Long id) {
+    public List<UserLogin> useDefaultDataSource(@PathVariable("id") Long id) {
         logger.info("使用默认数据源");
-        List<UserLongin> list = dataSourceService.selectById(id);
+        List<UserLogin> list = dataSourceService.selectById(id);
         return list;
     }
 
     @GetMapping("/ds1")
-    public List<UserLongin> useDS1DataSource() {
+    public List<UserLogin> useDS1DataSource() {
         logger.info("使用ds1数据源");
-        List<UserLongin> list = dataSourceService.selectAllDs1();
+        List<UserLogin> list = dataSourceService.selectAllDs1();
         return list;
     }
 
     @GetMapping("/ds2")
-    public List<UserLongin> useDS2DataSource() {
+    public List<UserLogin> useDS2DataSource() {
         logger.info("使用ds2数据源");
         StringBuilder stringBuilder = new StringBuilder();
-        List<UserLongin> list = dataSourceService.selectAllDs2();
+        List<UserLogin> list = dataSourceService.selectAllDs2();
         return list;
     }
 }

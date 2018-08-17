@@ -1,6 +1,6 @@
-package com.test.springboot_datasource;
+package com.test.springboot.datasource;
 
-import com.test.springboot_datasource.config.DynamicDataSourceRegister;
+import com.test.springboot.datasource.config.DynamicDataSourceRegister;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

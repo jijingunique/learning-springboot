@@ -1,4 +1,4 @@
-package com.test.springboot_datasource.config;
+package com.test.springboot.datasource.config;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
