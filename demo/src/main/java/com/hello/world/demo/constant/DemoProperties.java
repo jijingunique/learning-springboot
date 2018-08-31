@@ -22,7 +22,7 @@ public class DemoProperties {
     @Value("${test}")
     private String test;
 
-   @Value("${spring.datasource.url}")
-    private  String url;
 
+    @Value("${spring.datasource.url}")
+    private  String url;
 }

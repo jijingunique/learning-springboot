@@ -39,24 +39,24 @@ public class ProjectController {
         return "success";
     }
 
-    @ApiOperation(value="获取单个产品", notes="")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "id", value = "产品ID", required = true, dataType = "Integer"),
-            @ApiImplicitParam(name = "product", value = "产品实体project", required = true, dataType = "Product")
-    })
-    @RequestMapping(value="/get/{id}", method=RequestMethod.GET)
-    public Product getProduct(@PathVariable Integer id) {
-        // url中的id可通过@PathVariable绑定到函数的参数中
-        Optional<Product> p = productRepository.findById(id);
-
-        return p.get();
-    }
-
-    @ApiOperation(value="删除单个产品", notes="")
-    @ApiImplicitParam(name = "id", value = "产品ID", required = true, dataType = "Integer")
-    @RequestMapping(value="/delete/{id}", method=RequestMethod.DELETE)
-    public String deleteProduct(@PathVariable Integer id) {
-        productRepository.deleteById(id);
-        return "success";
-    }
+//    @ApiOperation(value="获取单个产品", notes="")
+//    @ApiImplicitParams({
+//            @ApiImplicitParam(name = "id", value = "产品ID", required = true, dataType = "Integer"),
+//            @ApiImplicitParam(name = "product", value = "产品实体project", required = true, dataType = "Product")
+//    })
+//    @RequestMapping(value="/get/{id}", method=RequestMethod.GET)
+//    public Product getProduct(@PathVariable Integer id) {
+//        // url中的id可通过@PathVariable绑定到函数的参数中
+//        // Optional<Product> p = productRepository.findById(id);
+//
+//        return p.get();
+//    }
+//
+//    @ApiOperation(value="删除单个产品", notes="")
+//    @ApiImplicitParam(name = "id", value = "产品ID", required = true, dataType = "Integer")
+//    @RequestMapping(value="/delete/{id}", method=RequestMethod.DELETE)
+//    public String deleteProduct(@PathVariable Integer id) {
+//        // productRepository.deleteById(id);
+//        return "success";
+//    }
 }

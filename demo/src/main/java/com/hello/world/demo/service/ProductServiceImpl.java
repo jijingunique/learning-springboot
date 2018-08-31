@@ -4,7 +4,6 @@ import com.hello.world.demo.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 
 import java.sql.ResultSet;

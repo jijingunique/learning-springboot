@@ -45,7 +45,7 @@ public class DemoApplicationTests {
        }
     }
 
-    @Before
+    //@Before
     public void before() {
         com.hello.world.demo.repository.Product product = new com.hello.world.demo.repository.Product();
         product.setType(10);
